@@ -1,8 +1,16 @@
-﻿namespace Pattern_Printing.src.Shapes
+﻿using Pattern_Printing.src.Abstracts;
+
+namespace Pattern_Printing.src.Shapes
 {
-    internal class Heart
+    internal class Heart : Shape
     {
-        public void Draw(double size)
+        private readonly int size;
+        public Heart(int size)
+        {
+            this.size = size;
+        }
+
+        public override void Draw()
         {
             //Parte de arriba del corazón
             for (double i = size / 2; i <= size; i += 2)

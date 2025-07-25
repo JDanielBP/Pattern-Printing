@@ -1,8 +1,16 @@
-﻿namespace Pattern_Printing.src.Shapes
+﻿using Pattern_Printing.src.Abstracts;
+
+namespace Pattern_Printing.src.Shapes
 {
-    internal class Star
+    internal class Star : Shape
     {
-        public void Draw(double size)
+        private readonly int size;
+        public Star(int size)
+        {
+            this.size = size;
+        }
+
+        public override void Draw()
         {
             //Punta de la estrella
             for (int i = 0; i < size; i++)
